@@ -25,9 +25,9 @@ if __name__ == '__main__':
 
     if mode.upper() == 'YES':
     
-        chill_spot = raw_input(bcolors.OKBLUE + "Would you like to hang in the Love Igloo, the Discotequa Kitchen, or the Chliving Room? " + bcolors.ENDC)
+        chill_spot = raw_input(bcolors.OKBLUE + "Would you like to hang in the Igloo, the Discotequa Kitchen, or the Chliving Room? " + bcolors.ENDC)
 
-        if chill_spot.upper() == 'LOVE IGLOO':
+        if chill_spot.upper() == 'IGLOO':
             for i in room:
                 requests.put('http://'+IP+'/api/'+username+'/lights/'+str(i)+'/state', json = {"on":"true", "sat":255, "bri":10,"hue":46920})
                 print 'Light '+str(i)+' illuminated.'
